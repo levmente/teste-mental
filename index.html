@@ -33,12 +33,16 @@ h1{font-size:22px;font-weight:600;line-height:1.3;margin-bottom:.5rem}
 .bullet{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:14px;color:#AAAAAA}
 .bullet-dot{color:#A855F7;font-size:18px;line-height:1;flex-shrink:0}
 .r-cta{font-size:13px;color:#888;margin-bottom:.75rem}
-.btn-cta{display:block;width:100%;padding:14px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;margin-top:.75rem;text-align:center;text-decoration:none}
+.btn-cta{display:block;width:100%;padding:16px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:700;cursor:pointer;margin-top:.75rem;text-align:center;text-decoration:none;transition:background .15s}
 .btn-cta:hover{background:#534AB7}
 .intro-cta{display:block;width:100%;padding:14px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;margin-top:1rem;text-align:center}
 .intro-cta:hover{background:#534AB7}
 .reset{background:transparent;border:none;color:#666;font-size:13px;cursor:pointer;margin-top:.75rem;display:block}
 .hidden{display:none}
+.divider-small{height:1px;background:#1A1A2E;margin:1rem 0}
+.next-step{background:#0F0820;border:1px solid #2A1A4E;border-radius:8px;padding:1rem;margin-top:1rem}
+.next-step p{font-size:12px;color:#666;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.06em}
+.next-step strong{font-size:14px;color:#DDDDDD;display:block;margin-bottom:.5rem}
 </style>
 </head>
 <body>
@@ -71,8 +75,13 @@ h1{font-size:22px;font-weight:600;line-height:1.3;margin-bottom:.5rem}
       <div id="r-title" class="r-title"></div>
       <div id="r-desc" class="r-desc"></div>
       <div id="r-bullets"></div>
+      <div class="divider-small"></div>
       <div id="r-cta" class="r-cta"></div>
-      <a id="r-link" href="SUA-PAGINA-DO-DESAFIO" class="btn-cta">Quero resolver isso — conhecer o Desafio 21 Dias</a>
+      <div class="next-step">
+        <p>próximo passo</p>
+        <strong>O Guia Prático para Destravar sua Mente</strong>
+        <a href="https://pay.kiwify.com.br/BZIOa9n" class="btn-cta">Quero o guia — R$37 →</a>
+      </div>
     </div>
     <button class="reset" onclick="resetTest()">Refazer o teste</button>
   </div>
@@ -80,176 +89,96 @@ h1{font-size:22px;font-weight:600;line-height:1.3;margin-bottom:.5rem}
 </div>
 
 <script>
-var questions = [
-  {
-    text: "Quando você pensa em começar algo importante, o que acontece primeiro?",
-    opts: [
-      {l:"A", t:"Minha mente trava e eu fico parado", p:"T"},
-      {l:"B", t:"Começo a pensar em tudo que precisa ser feito e me sobrecarrego", p:"S"},
-      {l:"C", t:"Pego o celular ou me distraio com outra coisa", p:"D"},
-      {l:"D", t:"Começo animado mas logo perco o ritmo", p:"T"}
-    ]
-  },
-  {
-    text: "Qual frase mais representa o que você sente no dia a dia?",
-    opts: [
-      {l:"A", t:"Sei exatamente o que fazer, mas simplesmente não começo", p:"T"},
-      {l:"B", t:"Tenho muita coisa na cabeça e não consigo organizar", p:"S"},
-      {l:"C", t:"Meu foco some rápido — qualquer coisa me tira da tarefa", p:"D"},
-      {l:"D", t:"Me sinto mentalmente cansado mesmo sem ter feito quase nada", p:"S"}
-    ]
-  },
-  {
-    text: "Quando uma tarefa exige esforço mental, você geralmente:",
-    opts: [
-      {l:"A", t:"Adia para quando estiver com mais disposição", p:"T"},
-      {l:"B", t:"Tenta fazer várias coisas ao mesmo tempo e não termina nenhuma", p:"S"},
-      {l:"C", t:"Se distrai no meio e esquece o que estava fazendo", p:"D"},
-      {l:"D", t:"Sente um bloqueio e não consegue nem começar", p:"T"}
-    ]
-  },
-  {
-    text: "Como você costuma lidar com prazos e compromissos?",
-    opts: [
-      {l:"A", t:"Só consigo funcionar quando o prazo está quase estourando", p:"T"},
-      {l:"B", t:"Aceito tudo e depois não dou conta de cumprir", p:"S"},
-      {l:"C", t:"Esqueço compromissos com frequência", p:"D"},
-      {l:"D", t:"Planejo mas raramente executo como planejei", p:"S"}
-    ]
-  },
-  {
-    text: "Ao final do dia, como você costuma se sentir?",
-    opts: [
-      {l:"A", t:"Com culpa por não ter feito o que precisava", p:"T"},
-      {l:"B", t:"Exausto, mesmo sem ter sido produtivo", p:"S"},
-      {l:"C", t:"Sem saber direito o que fiz durante o dia", p:"D"},
-      {l:"D", t:"Frustrado com minha falta de consistência", p:"T"}
-    ]
-  },
-  {
-    text: "Quando você promete para si mesmo que vai mudar, o que acontece?",
-    opts: [
-      {l:"A", t:"Começo com força mas trava na hora de executar", p:"T"},
-      {l:"B", t:"Crio um plano elaborado que nunca sai do papel", p:"S"},
-      {l:"C", t:"Me distraio com outras coisas e esqueço o plano", p:"D"},
-      {l:"D", t:"Volto ao mesmo padrão depois de poucos dias", p:"T"}
-    ]
-  },
-  {
-    text: "O que mais combina com sua relação com produtividade?",
-    opts: [
-      {l:"A", t:"Tenho potencial mas não consigo executar", p:"T"},
-      {l:"B", t:"Fico sobrecarregado e não sei por onde começar", p:"S"},
-      {l:"C", t:"Me perco fácil e perco o fio da meada", p:"D"},
-      {l:"D", t:"Sei o que preciso mas meu cérebro não coopera", p:"T"}
-    ]
-  }
+var questions=[
+  {text:"Quando você pensa em começar algo importante, o que acontece primeiro?",opts:[{l:"A",t:"Minha mente trava e eu fico parado",p:"T"},{l:"B",t:"Começo a pensar em tudo que precisa ser feito e me sobrecarrego",p:"S"},{l:"C",t:"Pego o celular ou me distraio com outra coisa",p:"D"},{l:"D",t:"Começo animado mas logo perco o ritmo",p:"T"}]},
+  {text:"Qual frase mais representa o que você sente no dia a dia?",opts:[{l:"A",t:"Sei exatamente o que fazer, mas simplesmente não começo",p:"T"},{l:"B",t:"Tenho muita coisa na cabeça e não consigo organizar",p:"S"},{l:"C",t:"Meu foco some rápido — qualquer coisa me tira da tarefa",p:"D"},{l:"D",t:"Me sinto mentalmente cansado mesmo sem ter feito quase nada",p:"S"}]},
+  {text:"Quando uma tarefa exige esforço mental, você geralmente:",opts:[{l:"A",t:"Adia para quando estiver com mais disposição",p:"T"},{l:"B",t:"Tenta fazer várias coisas ao mesmo tempo e não termina nenhuma",p:"S"},{l:"C",t:"Se distrai no meio e esquece o que estava fazendo",p:"D"},{l:"D",t:"Sente um bloqueio e não consegue nem começar",p:"T"}]},
+  {text:"Como você costuma lidar com prazos e compromissos?",opts:[{l:"A",t:"Só consigo funcionar quando o prazo está quase estourando",p:"T"},{l:"B",t:"Aceito tudo e depois não dou conta de cumprir",p:"S"},{l:"C",t:"Esqueço compromissos com frequência",p:"D"},{l:"D",t:"Planejo mas raramente executo como planejei",p:"S"}]},
+  {text:"Ao final do dia, como você costuma se sentir?",opts:[{l:"A",t:"Com culpa por não ter feito o que precisava",p:"T"},{l:"B",t:"Exausto, mesmo sem ter sido produtivo",p:"S"},{l:"C",t:"Sem saber direito o que fiz durante o dia",p:"D"},{l:"D",t:"Frustrado com minha falta de consistência",p:"T"}]},
+  {text:"Quando você promete para si mesmo que vai mudar, o que acontece?",opts:[{l:"A",t:"Começo com força mas trava na hora de executar",p:"T"},{l:"B",t:"Crio um plano elaborado que nunca sai do papel",p:"S"},{l:"C",t:"Me distraio com outras coisas e esqueço o plano",p:"D"},{l:"D",t:"Volto ao mesmo padrão depois de poucos dias",p:"T"}]},
+  {text:"O que mais combina com sua relação com produtividade?",opts:[{l:"A",t:"Tenho potencial mas não consigo executar",p:"T"},{l:"B",t:"Fico sobrecarregado e não sei por onde começar",p:"S"},{l:"C",t:"Me perco fácil e perco o fio da meada",p:"D"},{l:"D",t:"Sei o que preciso mas meu cérebro não coopera",p:"T"}]}
 ];
 
-var profiles = {
-  T: {
-    badge: "Mente Travada",
-    badgeBg: "#1A0A2E",
-    badgeColor: "#A855F7",
-    title: "Você sabe o que fazer — mas trava na hora de começar.",
-    desc: "Seu cérebro aprendeu a associar esforço com desconforto e automaticamente evita o início. Não é falta de vontade. É um padrão neurológico que pode ser reprogramado.",
-    bullets: ["Você precisa de gatilhos de ativação", "Pequenas ações quebram o bloqueio", "A regra dos 5 segundos foi feita pra você"],
-    cta: "O Desafio 21 Dias foi projetado exatamente para esse padrão."
-  },
-  S: {
-    badge: "Mente Sobrecarregada",
-    badgeBg: "#0A1A10",
-    badgeColor: "#22C55E",
-    title: "Você tem muitas ideias — mas pouca estrutura para executar.",
-    desc: "Sua mente vive em modo urgência. Você começa muito e termina pouco. O problema não é energia — é falta de um sistema que organize o que fazer primeiro.",
-    bullets: ["Você precisa de rituais e organização mental", "Aprender a fazer menos, melhor", "Criar um sistema de prioridades simples"],
-    cta: "O Desafio 21 Dias te dá a estrutura que sua mente precisa."
-  },
-  D: {
-    badge: "Mente Dispersa",
-    badgeBg: "#1A0A0A",
-    badgeColor: "#F97316",
-    title: "Seu foco some rápido — e você sabe disso.",
-    desc: "Seu cérebro busca estímulos constantemente. Qualquer coisa nova compete com o que é importante. Não é falta de inteligência — é um sistema de atenção que precisa de apoio externo.",
-    bullets: ["Você precisa de sistemas externos de foco", "Eliminar distrações do ambiente é prioridade", "Rituais curtos ajudam o cérebro a se fixar"],
-    cta: "O Desafio 21 Dias te ensina a criar esse ambiente de foco."
-  }
+var profiles={
+  T:{badge:"Mente Travada",badgeBg:"#1A0A2E",badgeColor:"#A855F7",title:"Você sabe o que fazer — mas trava na hora de começar.",desc:"Seu cérebro aprendeu a associar esforço com desconforto e automaticamente evita o início. Não é falta de vontade. É um padrão neurológico que pode ser reprogramado.",bullets:["Você precisa de gatilhos de ativação","Pequenas ações quebram o bloqueio","A regra dos 5 segundos foi feita pra você"],cta:"O guia abaixo foi criado exatamente para esse padrão."},
+  S:{badge:"Mente Sobrecarregada",badgeBg:"#0A1A10",badgeColor:"#22C55E",title:"Você tem muitas ideias — mas pouca estrutura para executar.",desc:"Sua mente vive em modo urgência. Você começa muito e termina pouco. O problema não é energia — é falta de um sistema que organize o que fazer primeiro.",bullets:["Você precisa de rituais e organização mental","Aprender a fazer menos, melhor","Criar um sistema de prioridades simples"],cta:"O guia abaixo te dá a estrutura que sua mente precisa."},
+  D:{badge:"Mente Dispersa",badgeBg:"#1A0A0A",badgeColor:"#F97316",title:"Seu foco some rápido — e você sabe disso.",desc:"Seu cérebro busca estímulos constantemente. Qualquer coisa nova compete com o que é importante. Não é falta de inteligência — é um sistema de atenção que precisa de apoio externo.",bullets:["Você precisa de sistemas externos de foco","Eliminar distrações do ambiente é prioridade","Rituais curtos ajudam o cérebro a se fixar"],cta:"O guia abaixo te ensina a criar esse ambiente de foco."}
 };
 
-var current = 0, answers = [], selected = null;
+var current=0,answers=[],selected=null;
 
-function startTest() {
+function startTest(){
   document.getElementById('intro').classList.add('hidden');
   document.getElementById('quiz').classList.remove('hidden');
   renderQ();
 }
 
-function renderQ() {
-  var q = questions[current];
-  selected = answers[current] !== undefined ? answers[current] : null;
-  document.getElementById('q-num').textContent = 'Pergunta ' + (current + 1) + ' de ' + questions.length;
-  document.getElementById('q-text').textContent = q.text;
-  document.getElementById('prog').style.width = ((current / questions.length) * 100) + '%';
-  document.getElementById('btn-back').style.display = current > 0 ? 'inline-block' : 'none';
-  var nb = document.getElementById('btn-next');
-  nb.disabled = selected === null;
-  nb.textContent = current === questions.length - 1 ? 'Ver resultado' : 'Próxima';
-  var c = document.getElementById('q-opts');
-  c.innerHTML = '';
-  q.opts.forEach(function(o, i) {
-    var d = document.createElement('div');
-    d.className = 'opt' + (selected === i ? ' sel' : '');
-    d.innerHTML = '<span class="opt-l">' + o.l + '</span><span>' + o.t + '</span>';
-    d.onclick = function() { selectOpt(i); };
+function renderQ(){
+  var q=questions[current];
+  selected=answers[current]!==undefined?answers[current]:null;
+  document.getElementById('q-num').textContent='Pergunta '+(current+1)+' de '+questions.length;
+  document.getElementById('q-text').textContent=q.text;
+  document.getElementById('prog').style.width=((current/questions.length)*100)+'%';
+  document.getElementById('btn-back').style.display=current>0?'inline-block':'none';
+  var nb=document.getElementById('btn-next');
+  nb.disabled=selected===null;
+  nb.textContent=current===questions.length-1?'Ver resultado':'Próxima';
+  var c=document.getElementById('q-opts');
+  c.innerHTML='';
+  q.opts.forEach(function(o,i){
+    var d=document.createElement('div');
+    d.className='opt'+(selected===i?' sel':'');
+    d.innerHTML='<span class="opt-l">'+o.l+'</span><span>'+o.t+'</span>';
+    d.onclick=function(){selectOpt(i);};
     c.appendChild(d);
   });
 }
 
-function selectOpt(i) {
-  selected = i;
-  answers[current] = i;
-  document.getElementById('btn-next').disabled = false;
+function selectOpt(i){
+  selected=i;
+  answers[current]=i;
+  document.getElementById('btn-next').disabled=false;
   renderQ();
 }
 
-function nextQ() {
-  if (selected === null) return;
-  if (current < questions.length - 1) {
+function nextQ(){
+  if(selected===null)return;
+  if(current<questions.length-1){
     current++;
-    selected = answers[current] !== undefined ? answers[current] : null;
+    selected=answers[current]!==undefined?answers[current]:null;
     renderQ();
   } else {
     showResult();
   }
 }
 
-function prevQ() {
-  if (current > 0) { current--; renderQ(); }
+function prevQ(){
+  if(current>0){current--;renderQ();}
 }
 
-function showResult() {
-  var count = {T:0, S:0, D:0};
-  answers.forEach(function(a, i) { count[questions[i].opts[a].p]++; });
-  var top = Object.entries(count).sort(function(a,b){ return b[1]-a[1]; })[0][0];
-  var p = profiles[top];
+function showResult(){
+  var count={T:0,S:0,D:0};
+  answers.forEach(function(a,i){count[questions[i].opts[a].p]++;});
+  var top=Object.entries(count).sort(function(a,b){return b[1]-a[1];})[0][0];
+  var p=profiles[top];
   document.getElementById('quiz').classList.add('hidden');
   document.getElementById('result').classList.remove('hidden');
-  document.getElementById('prog').style.width = '100%';
-  var b = document.getElementById('r-badge');
-  b.textContent = p.badge;
-  b.style.background = p.badgeBg;
-  b.style.color = p.badgeColor;
-  document.getElementById('r-title').textContent = p.title;
-  document.getElementById('r-desc').textContent = p.desc;
-  document.getElementById('r-cta').textContent = p.cta;
-  var bul = document.getElementById('r-bullets');
-  bul.innerHTML = p.bullets.map(function(b) {
-    return '<div class="bullet"><span class="bullet-dot">+</span>' + b + '</div>';
+  document.getElementById('prog').style.width='100%';
+  var b=document.getElementById('r-badge');
+  b.textContent=p.badge;
+  b.style.background=p.badgeBg;
+  b.style.color=p.badgeColor;
+  document.getElementById('r-title').textContent=p.title;
+  document.getElementById('r-desc').textContent=p.desc;
+  document.getElementById('r-cta').textContent=p.cta;
+  var bul=document.getElementById('r-bullets');
+  bul.innerHTML=p.bullets.map(function(b){
+    return '<div class="bullet"><span class="bullet-dot">+</span>'+b+'</div>';
   }).join('');
 }
 
-function resetTest() {
-  current = 0; answers = []; selected = null;
+function resetTest(){
+  current=0;answers=[];selected=null;
   document.getElementById('result').classList.add('hidden');
   document.getElementById('intro').classList.remove('hidden');
 }
