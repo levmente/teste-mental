@@ -27,22 +27,50 @@ h1{font-size:22px;font-weight:600;line-height:1.3;margin-bottom:.5rem}
 .btn-p{background:#7F77DD;border-color:#7F77DD;color:#fff}
 .btn-p:hover{background:#534AB7}
 .btn-p:disabled{opacity:.4;cursor:not-allowed}
-.badge{display:inline-block;padding:4px 12px;border-radius:6px;font-size:12px;font-weight:500;margin-bottom:1rem}
-.r-title{font-size:20px;font-weight:600;margin-bottom:.5rem;line-height:1.4}
-.r-desc{font-size:14px;color:#AAAAAA;line-height:1.7;margin-bottom:1rem}
-.bullet{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:14px;color:#AAAAAA}
-.bullet-dot{color:#A855F7;font-size:18px;line-height:1;flex-shrink:0}
-.r-cta{font-size:13px;color:#888;margin-bottom:.75rem}
-.btn-cta{display:block;width:100%;padding:16px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:700;cursor:pointer;margin-top:.75rem;text-align:center;text-decoration:none;transition:background .15s}
+
+/* Resultado */
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:6px;font-size:12px;font-weight:600;margin-bottom:1.25rem;letter-spacing:.04em}
+.badge-dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.r-card{background:#111;border:1px solid #1A1A2E;border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.r-title{font-size:20px;font-weight:700;margin-bottom:.75rem;line-height:1.35;color:#fff}
+.r-hook{font-size:15px;color:#DDDDDD;line-height:1.7;margin-bottom:1.25rem;font-style:italic;border-left:3px solid #7F77DD;padding-left:1rem;border-radius:0}
+.r-desc{font-size:14px;color:#AAAAAA;line-height:1.75;margin-bottom:1.25rem}
+.bullets-title{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#555;margin-bottom:.75rem}
+.bullet{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:14px;color:#CCCCCC;line-height:1.55}
+.bullet-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px}
+.divider{height:1px;background:#1A1A2E;margin:1.25rem 0}
+
+/* Bloco de oferta */
+.offer-block{background:#0A0A1A;border:1px solid #2A1A4E;border-radius:10px;padding:1.25rem;margin-top:1rem}
+.offer-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#7F77DD;margin-bottom:.5rem}
+.offer-title{font-size:16px;font-weight:600;color:#fff;margin-bottom:.25rem;line-height:1.4}
+.offer-sub{font-size:13px;color:#888;margin-bottom:1rem;line-height:1.55}
+.offer-price{display:flex;align-items:baseline;gap:8px;margin-bottom:1rem}
+.price-from{font-size:12px;color:#555;text-decoration:line-through}
+.price-now{font-size:24px;font-weight:700;color:#A855F7}
+.price-label{font-size:12px;color:#666}
+.btn-cta{display:block;width:100%;padding:16px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;transition:background .15s;letter-spacing:.01em}
 .btn-cta:hover{background:#534AB7}
-.intro-cta{display:block;width:100%;padding:14px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;margin-top:1rem;text-align:center}
-.intro-cta:hover{background:#534AB7}
-.reset{background:transparent;border:none;color:#666;font-size:13px;cursor:pointer;margin-top:.75rem;display:block}
+.trust{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:.75rem;flex-wrap:wrap}
+.trust-item{font-size:11px;color:#555;display:flex;align-items:center;gap:4px}
+.trust-dot{width:3px;height:3px;border-radius:50%;background:#333;flex-shrink:0}
+.social-proof{background:#111827;border:1px solid #1F2937;border-radius:8px;padding:.875rem 1rem;margin-top:.75rem;display:flex;align-items:flex-start;gap:10px}
+.sp-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.sp-text{font-size:13px;color:#9CA3AF;line-height:1.5}
+.sp-text strong{color:#D1D5DB;font-weight:500}
+
+.reset{background:transparent;border:none;color:#555;font-size:13px;cursor:pointer;margin-top:.75rem;display:block;width:100%;text-align:center;padding:.5rem}
+.reset:hover{color:#888}
 .hidden{display:none}
-.divider-small{height:1px;background:#1A1A2E;margin:1rem 0}
-.next-step{background:#0F0820;border:1px solid #2A1A4E;border-radius:8px;padding:1rem;margin-top:1rem}
-.next-step p{font-size:12px;color:#666;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.06em}
-.next-step strong{font-size:14px;color:#DDDDDD;display:block;margin-bottom:.5rem}
+
+/* Intro */
+.intro-stats{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.intro-stat{flex:1;min-width:100px;background:#111;border:1px solid #1A1A2E;border-radius:8px;padding:.875rem;text-align:center}
+.intro-stat-num{font-size:18px;font-weight:700;color:#A855F7;display:block;margin-bottom:.2rem}
+.intro-stat-label{font-size:11px;color:#666}
+.intro-cta{display:block;width:100%;padding:14px;background:#7F77DD;border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;margin-top:1rem;text-align:center;transition:background .15s}
+.intro-cta:hover{background:#534AB7}
+.intro-note{font-size:12px;color:#555;text-align:center;margin-top:.5rem}
 </style>
 
 <!-- PostHog -->
@@ -58,13 +86,30 @@ posthog.init('phc_wvTjbAx6q6rNdGdqvpJWmqon82xsYVIaFrTqRUgZWvl', {
 <body>
 <div class="wrap">
 
+  <!-- INTRO -->
   <div id="intro">
     <div class="tag">teste de perfil mental</div>
     <h1>Descubra por que você procrastina</h1>
-    <p class="sub">7 perguntas. Menos de 2 minutos.<br>Descubra qual padrão mental está travando sua ação.</p>
-    <button class="intro-cta" onclick="startTest()">Começar o teste</button>
+    <p class="sub">7 perguntas rápidas. Resultado imediato.<br>Descubra qual padrão mental está bloqueando sua ação — e o que fazer sobre isso.</p>
+    <div class="intro-stats">
+      <div class="intro-stat">
+        <span class="intro-stat-num">7</span>
+        <span class="intro-stat-label">perguntas</span>
+      </div>
+      <div class="intro-stat">
+        <span class="intro-stat-num">&lt;2min</span>
+        <span class="intro-stat-label">para completar</span>
+      </div>
+      <div class="intro-stat">
+        <span class="intro-stat-num">3</span>
+        <span class="intro-stat-label">perfis possíveis</span>
+      </div>
+    </div>
+    <button class="intro-cta" onclick="startTest()">Descobrir meu perfil →</button>
+    <p class="intro-note">Grátis. Sem cadastro.</p>
   </div>
 
+  <!-- QUIZ -->
   <div id="quiz" class="hidden">
     <div class="progress"><div class="progress-fill" id="prog" style="width:0%"></div></div>
     <div class="card">
@@ -73,33 +118,16 @@ posthog.init('phc_wvTjbAx6q6rNdGdqvpJWmqon82xsYVIaFrTqRUgZWvl', {
       <div id="q-opts"></div>
     </div>
     <div class="actions">
-      <button class="btn" id="btn-back" onclick="prevQ()" style="display:none">Voltar</button>
+      <button class="btn" id="btn-back" onclick="prevQ()" style="display:none">← Voltar</button>
       <button class="btn btn-p" id="btn-next" onclick="nextQ()" disabled>Próxima</button>
     </div>
   </div>
 
+  <!-- RESULTADO -->
   <div id="result" class="hidden">
     <div class="tag">seu resultado</div>
-    <div class="card">
-      <div id="r-badge" class="badge"></div>
-      <div id="r-title" class="r-title"></div>
-      <div id="r-desc" class="r-desc"></div>
-      <div id="r-bullets"></div>
-      <div class="divider-small"></div>
-      <div id="r-cta" class="r-cta"></div>
-      <div class="next-step">
-        <p>próximo passo</p>
-        <strong>O Guia Prático para Destravar sua Mente</strong>
-        <a
-          href="https://ebooktdah.lovable.app"
-          class="btn-cta"
-          onclick="trackGuideClick(event)"
-        >
-          Quero o guia — R$27 →
-        </a>
-      </div>
-    </div>
-    <button class="reset" onclick="resetTest()">Refazer o teste</button>
+    <div class="r-card" id="r-card"></div>
+    <button class="reset" onclick="resetTest()">↩ Refazer o teste</button>
   </div>
 
 </div>
@@ -116,9 +144,54 @@ var questions=[
 ];
 
 var profiles={
-  T:{badge:"Mente Travada",badgeBg:"#1A0A2E",badgeColor:"#A855F7",title:"Você sabe o que fazer — mas trava na hora de começar.",desc:"Seu cérebro aprendeu a associar esforço com desconforto e automaticamente evita o início. Não é falta de vontade. É um padrão neurológico que pode ser reprogramado.",bullets:["Você precisa de gatilhos de ativação","Pequenas ações quebram o bloqueio","A regra dos 5 segundos foi feita pra você"],cta:"O guia abaixo foi criado exatamente para esse padrão."},
-  S:{badge:"Mente Sobrecarregada",badgeBg:"#0A1A10",badgeColor:"#22C55E",title:"Você tem muitas ideias — mas pouca estrutura para executar.",desc:"Sua mente vive em modo urgência. Você começa muito e termina pouco. O problema não é energia — é falta de um sistema que organize o que fazer primeiro.",bullets:["Você precisa de rituais e organização mental","Aprender a fazer menos, melhor","Criar um sistema de prioridades simples"],cta:"O guia abaixo te dá a estrutura que sua mente precisa."},
-  D:{badge:"Mente Dispersa",badgeBg:"#1A0A0A",badgeColor:"#F97316",title:"Seu foco some rápido — e você sabe disso.",desc:"Seu cérebro busca estímulos constantemente. Qualquer coisa nova compete com o que é importante. Não é falta de inteligência — é um sistema de atenção que precisa de apoio externo.",bullets:["Você precisa de sistemas externos de foco","Eliminar distrações do ambiente é prioridade","Rituais curtos ajudam o cérebro a se fixar"],cta:"O guia abaixo te ensina a criar esse ambiente de foco."}
+  T:{
+    badgeBg:"#1A0A2E", badgeColor:"#A855F7", badgeText:"Mente Travada",
+    hookBorder:"#7F77DD",
+    title:"Você sabe exatamente o que fazer. E é exatamente isso que paralisa.",
+    hook:"Não é falta de vontade. É o seu cérebro entrando em colapso antes de começar — e você pagando o preço por isso todo dia.",
+    desc:"Seu padrão é claro: você pensa, planeja, sabe o caminho. Mas na hora de executar, trava. O cérebro com TDAH tem dificuldade real em iniciar tarefas sem dopamina suficiente — não é preguiça, é neurologia. A boa notícia é que esse padrão tem solução concreta.",
+    bulletsTitle:"Por que isso está acontecendo com você:",
+    bullets:[
+      "Seu cérebro precisa de um gatilho externo para começar — ele não funciona por vontade pura",
+      "Você está esperando o momento certo, mas ele nunca chega porque o início é sempre o ponto mais difícil",
+      "Cada vez que você não começa, o cérebro aprende que evitar é seguro — o ciclo se reforça sozinho"
+    ],
+    bulletBg:"#2A1A4E", bulletColor:"#A855F7",
+    offerSub:"O sistema que ensina seu cérebro a começar — sem precisar de força de vontade.",
+    socialProof:"Mais de 80% dos leitores com Mente Travada relatam conseguir iniciar tarefas difíceis já na primeira semana de aplicação."
+  },
+  S:{
+    badgeBg:"#0A1A10", badgeColor:"#22C55E", badgeText:"Mente Sobrecarregada",
+    hookBorder:"#22C55E",
+    title:"Você não é improdutivo. Você é um motor sem marcha — em rotação máxima o tempo todo.",
+    hook:"O problema não é fazer pouco. É fazer demais, sem direção — e chegar ao fim do dia exausto sem nada realmente concluído.",
+    desc:"Sua mente vive em modo acelerado. Você aceita tudo, planeja tudo, quer resolver tudo — mas o excesso de entrada bloqueia a saída. Com TDAH, a dificuldade em priorizar faz tudo parecer urgente ao mesmo tempo. Resultado: paralisia por sobrecarga, não por falta de esforço.",
+    bulletsTitle:"Por que isso está acontecendo com você:",
+    bullets:[
+      "Você não tem um sistema de triagem — tudo entra com o mesmo peso na sua cabeça",
+      "Seu cérebro vive em modo de emergência, o que drena energia antes de qualquer tarefa começar",
+      "Você confunde movimento com progresso — e no fim do dia não sabe o que de fato avançou"
+    ],
+    bulletBg:"#0A2A15", bulletColor:"#22C55E",
+    offerSub:"O sistema de organização mental que transforma caos em clareza — sem precisar ser perfeito para funcionar.",
+    socialProof:"Pessoas com Mente Sobrecarregada relatam redução imediata de ansiedade ao implementar o sistema de priorização do guia."
+  },
+  D:{
+    badgeBg:"#1A0D00", badgeColor:"#F97316", badgeText:"Mente Dispersa",
+    hookBorder:"#F97316",
+    title:"Seu problema não é foco. É que seu cérebro foi construído pra buscar novidade — e o mundo inteiro sabe disso.",
+    hook:"Você começa com energia total. Mas em 20 minutos algo captura sua atenção — e você mal percebe que saiu completamente da tarefa.",
+    desc:"O cérebro com TDAH tem um sistema de atenção diferente: ele vai automaticamente para o que é novo, urgente ou interessante. Não dá pra mudar isso por força de vontade. Mas dá pra construir um ambiente onde esse cérebro consegue se fixar no que importa — com as ferramentas certas.",
+    bulletsTitle:"Por que isso está acontecendo com você:",
+    bullets:[
+      "Seu ambiente está cheio de gatilhos de distração — e seu cérebro não tem como resistir a eles sozinho",
+      "Você não tem rituais de entrada — o foco não aparece por vontade, ele precisa ser ativado externamente",
+      "Tarefas longas e sem feedback imediato são kryptonita para o seu tipo de cérebro"
+    ],
+    bulletBg:"#2A1500", bulletColor:"#F97316",
+    offerSub:"O sistema de foco externo que funciona exatamente para quem não consegue se forçar a prestar atenção.",
+    socialProof:"Leitores com Mente Dispersa são os que mais se surpreendem com os resultados — porque finalmente entendem o motivo real por trás do padrão."
+  }
 };
 
 var current=0,answers=[],selected=null;
@@ -127,48 +200,46 @@ var quizStartedTracked=false;
 var resultViewedTracked=false;
 
 function getUTMParams(){
-  var params = new URLSearchParams(window.location.search);
-  return {
-    utm_source: params.get('utm_source') || '',
-    utm_medium: params.get('utm_medium') || '',
-    utm_campaign: params.get('utm_campaign') || '',
-    utm_content: params.get('utm_content') || '',
-    utm_term: params.get('utm_term') || ''
+  var params=new URLSearchParams(window.location.search);
+  return{
+    utm_source:params.get('utm_source')||'',
+    utm_medium:params.get('utm_medium')||'',
+    utm_campaign:params.get('utm_campaign')||'',
+    utm_content:params.get('utm_content')||'',
+    utm_term:params.get('utm_term')||''
   };
 }
 
 function getBaseEventProps(){
-  return {
-    page_url: window.location.href,
-    page_path: window.location.pathname,
-    page_title: document.title,
+  return{
+    page_url:window.location.href,
+    page_path:window.location.pathname,
+    page_title:document.title,
     ...getUTMParams()
   };
 }
 
-function safeCapture(eventName, props){
+function safeCapture(eventName,props){
   try{
-    if(window.posthog && typeof window.posthog.capture === 'function'){
-      window.posthog.capture(eventName, props || {});
+    if(window.posthog&&typeof window.posthog.capture==='function'){
+      window.posthog.capture(eventName,props||{});
     }
   }catch(e){
-    console.error('Erro ao enviar evento para o PostHog:', eventName, e);
+    console.error('PostHog error:',eventName,e);
   }
 }
 
 function startTest(){
   document.getElementById('intro').classList.add('hidden');
   document.getElementById('quiz').classList.remove('hidden');
-
   if(!quizStartedTracked){
-    safeCapture('quiz_started', {
+    safeCapture('quiz_started',{
       ...getBaseEventProps(),
-      quiz_name: 'teste_mental',
-      total_questions: questions.length
+      quiz_name:'teste_mental',
+      total_questions:questions.length
     });
-    quizStartedTracked = true;
+    quizStartedTracked=true;
   }
-
   renderQ();
 }
 
@@ -181,7 +252,7 @@ function renderQ(){
   document.getElementById('btn-back').style.display=current>0?'inline-block':'none';
   var nb=document.getElementById('btn-next');
   nb.disabled=selected===null;
-  nb.textContent=current===questions.length-1?'Ver resultado':'Próxima';
+  nb.textContent=current===questions.length-1?'Ver meu resultado →':'Próxima →';
   var c=document.getElementById('q-opts');
   c.innerHTML='';
   q.opts.forEach(function(o,i){
@@ -197,18 +268,16 @@ function selectOpt(i){
   selected=i;
   answers[current]=i;
   document.getElementById('btn-next').disabled=false;
-
-  var option = questions[current].opts[i];
-  safeCapture('quiz_question_answered', {
+  var option=questions[current].opts[i];
+  safeCapture('quiz_question_answered',{
     ...getBaseEventProps(),
-    quiz_name: 'teste_mental',
-    question_number: current + 1,
-    question_text: questions[current].text,
-    answer_letter: option.l,
-    answer_text: option.t,
-    answer_profile: option.p
+    quiz_name:'teste_mental',
+    question_number:current+1,
+    question_text:questions[current].text,
+    answer_letter:option.l,
+    answer_text:option.t,
+    answer_profile:option.p
   });
-
   renderQ();
 }
 
@@ -218,7 +287,7 @@ function nextQ(){
     current++;
     selected=answers[current]!==undefined?answers[current]:null;
     renderQ();
-  } else {
+  }else{
     showResult();
   }
 }
@@ -232,55 +301,92 @@ function showResult(){
   answers.forEach(function(a,i){count[questions[i].opts[a].p]++;});
   var top=Object.entries(count).sort(function(a,b){return b[1]-a[1];})[0][0];
   var p=profiles[top];
-  currentResultType = top;
+  currentResultType=top;
 
-  safeCapture('quiz_completed', {
+  safeCapture('quiz_completed',{
     ...getBaseEventProps(),
-    quiz_name: 'teste_mental',
-    total_questions: questions.length,
-    answers_count: answers.length,
-    result_type: top,
-    result_label: p.badge,
-    score_T: count.T,
-    score_S: count.S,
-    score_D: count.D
+    quiz_name:'teste_mental',
+    total_questions:questions.length,
+    answers_count:answers.length,
+    result_type:top,
+    result_label:p.badgeText,
+    score_T:count.T,
+    score_S:count.S,
+    score_D:count.D
   });
 
   document.getElementById('quiz').classList.add('hidden');
   document.getElementById('result').classList.remove('hidden');
-  var prog = document.getElementById('prog');
-  if(prog) prog.style.width='100%';
 
-  var b=document.getElementById('r-badge');
-  b.textContent=p.badge;
-  b.style.background=p.badgeBg;
-  b.style.color=p.badgeColor;
-  document.getElementById('r-title').textContent=p.title;
-  document.getElementById('r-desc').textContent=p.desc;
-  document.getElementById('r-cta').textContent=p.cta;
-  var bul=document.getElementById('r-bullets');
-  bul.innerHTML=p.bullets.map(function(b){
-    return '<div class="bullet"><span class="bullet-dot">+</span>'+b+'</div>';
-  }).join('');
+  var prog=document.getElementById('prog');
+  if(prog)prog.style.width='100%';
+
+  renderResult(top,p);
 
   if(!resultViewedTracked){
-    safeCapture('quiz_result_viewed', {
+    safeCapture('quiz_result_viewed',{
       ...getBaseEventProps(),
-      quiz_name: 'teste_mental',
-      result_type: top,
-      result_label: p.badge
+      quiz_name:'teste_mental',
+      result_type:top,
+      result_label:p.badgeText
     });
-    resultViewedTracked = true;
+    resultViewedTracked=true;
   }
 }
 
-function trackGuideClick(event){
-  safeCapture('quiz_cta_clicked', {
+function renderResult(type,p){
+  var bulletsHTML=p.bullets.map(function(b,i){
+    return '<div class="bullet">'+
+      '<div class="bullet-num" style="background:'+p.bulletBg+';color:'+p.bulletColor+'">'+(i+1)+'</div>'+
+      '<span>'+b+'</span>'+
+    '</div>';
+  }).join('');
+
+  document.getElementById('r-card').innerHTML=
+    '<div class="badge" style="background:'+p.badgeBg+';color:'+p.badgeColor+'">'+
+      '<span class="badge-dot" style="background:'+p.badgeColor+'"></span>'+
+      p.badgeText+
+    '</div>'+
+    '<div class="r-title">'+p.title+'</div>'+
+    '<div class="r-hook" style="border-left-color:'+p.hookBorder+'">'+p.hook+'</div>'+
+    '<div class="r-desc">'+p.desc+'</div>'+
+    '<div class="bullets-title">'+p.bulletsTitle+'</div>'+
+    bulletsHTML+
+    '<div class="divider"></div>'+
+    '<div class="offer-block">'+
+      '<div class="offer-tag">próximo passo recomendado para você</div>'+
+      '<div class="offer-title">Guia Prático para Destravar sua Mente</div>'+
+      '<div class="offer-sub">'+p.offerSub+'</div>'+
+      '<div class="offer-price">'+
+        '<span class="price-from">R$97</span>'+
+        '<span class="price-now">R$27</span>'+
+        '<span class="price-label">— acesso imediato</span>'+
+      '</div>'+
+      '<a href="https://ebooktdah.lovable.app" class="btn-cta" onclick="trackCTAClick(event)">'+
+        'Quero o guia agora →'+
+      '</a>'+
+      '<div class="trust">'+
+        '<span class="trust-item">✓ Acesso imediato</span>'+
+        '<span class="trust-dot"></span>'+
+        '<span class="trust-item">✓ Pagamento seguro</span>'+
+        '<span class="trust-dot"></span>'+
+        '<span class="trust-item">✓ Garantia 7 dias</span>'+
+      '</div>'+
+      '<div class="social-proof">'+
+        '<span class="sp-icon">💬</span>'+
+        '<div class="sp-text">'+p.socialProof+'</div>'+
+      '</div>'+
+    '</div>';
+}
+
+function trackCTAClick(event){
+  safeCapture('quiz_cta_clicked',{
     ...getBaseEventProps(),
-    quiz_name: 'teste_mental',
-    result_type: currentResultType || '',
-    destination_url: 'https://ebooktdah.lovable.app',
-    cta_text: 'Quero o guia — R$27 →'
+    quiz_name:'teste_mental',
+    result_type:currentResultType||'',
+    result_label:currentResultType?profiles[currentResultType].badgeText:'',
+    destination_url:'https://ebooktdah.lovable.app',
+    cta_text:'Quero o guia agora →'
   });
 }
 
