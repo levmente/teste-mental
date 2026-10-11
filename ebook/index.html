@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Você Não É Preguiçoso — ebook gratuito de Júlio Giani</title>
+<meta name="description" content="Entenda seu cérebro com TDAH e descubra como parar de depender apenas da força de vontade. Ebook gratuito, sem cadastro." />
+<link rel="canonical" href="https://levmente.github.io/teste-mental/ebook/" />
+<meta name="theme-color" content="#0A0A0F" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Você Não É Preguiçoso — ebook gratuito" />
+<meta property="og:description" content="Entenda seu cérebro com TDAH e descubra como parar de depender apenas da força de vontade." />
+<meta property="og:url" content="https://levmente.github.io/teste-mental/ebook/" />
+<meta property="og:image" content="https://levmente.github.io/teste-mental/ebook/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0A0F'/%3E%3Crect x='6' y='7' width='20' height='4' fill='%23B5FF43'/%3E%3Crect x='6' y='15' width='14' height='3' fill='%23fff'/%3E%3Crect x='6' y='21' width='17' height='3' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Instrument+Sans:wght@400;500;600&display=swap" />
+
+<!-- PostHog: mesmo projeto do restante do funil -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_wvTjbAx6q6rNdGdqvpJWmqon82xsYVIaFrTqRUgZWvl', {
+  api_host: 'https://us.i.posthog.com',
+  defaults: '2026-01-30'
+});
+</script>
+
+<style>
+/* Layout: a página é a capa do ebook. Faixa verde no topo, título à esquerda,
+   botão logo abaixo; o sumário usa os números de página reais do PDF. */
+:root {
+  color-scheme: dark;
+  --ink: #0A0A0F;        /* fundo do ebook */
+  --ink-2: #14141B;      /* superfície elevada */
+  --line: #2A2A33;       /* fios e bordas */
+  --lime: #B5FF43;       /* verde do ebook */
+  --lime-deep: #8FD424;  /* estado pressionado */
+  --paper: #FFFFFF;      /* texto principal */
+  --mist: #A3A3AC;       /* texto de apoio */
+
+  --display: "Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --gutter: clamp(20px, 6vw, 56px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+body::before { /* faixa da capa */
+  content: "";
+  display: block;
+  height: 10px;
+  background: var(--lime);
+  flex: none;
+}
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  padding-block: clamp(28px, 7vw, 72px) 40px;
+  display: grid;
+  gap: clamp(40px, 8vw, 72px);
+  align-content: start;
+}
+
+.cover { display: grid; gap: 20px; min-width: 0; }
+.byline {
+  margin: 0;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+.byline b { color: var(--lime); font-weight: 800; }
+
+h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-stretch: 118%;
+  font-weight: 900;
+  font-size: clamp(1.9rem, 9.4vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: var(--lime);
+  text-wrap: balance;
+}
+.lead {
+  margin: 0;
+  max-width: 34ch;
+  font-size: clamp(1.125rem, 2.2vw, 1.375rem);
+  line-height: 1.4;
+}
+
+.get { display: grid; gap: 12px; justify-items: start; margin-top: 8px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 420px;
+  min-height: 64px;
+  padding: 16px 24px;
+  background: var(--lime);
+  color: var(--ink);
+  font-family: var(--display);
+  font-stretch: 110%;
+  font-weight: 800;
+  font-size: clamp(0.9rem, 4.1vw, 1.0625rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+.btn svg { flex: none; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); background: var(--lime-deep); }
+.btn:focus-visible, .help summary:focus-visible, .help a:focus-visible {
+  outline: 3px solid var(--paper);
+  outline-offset: 3px;
+}
+.facts {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--mist);
+  font-variant-numeric: tabular-nums;
+}
+
+.help { font-size: 0.9375rem; color: var(--mist); max-width: 420px; }
+.help summary {
+  cursor: pointer;
+  color: var(--paper);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+  list-style: none;
+  width: fit-content;
+}
+.help summary::-webkit-details-marker { display: none; }
+.help p { margin: 10px 0 0; }
+.help a { color: var(--lime); text-underline-offset: 3px; }
+
+.inside { display: grid; gap: 28px; min-width: 0; }
+.inside h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+.toc { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.toc li {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.toc .pg {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  font-variant-numeric: tabular-nums;
+}
+.toc .ttl { font-weight: 600; line-height: 1.3; }
+.toc .sub { display: block; margin-top: 4px; font-weight: 400; font-size: 0.9375rem; color: var(--mist); }
+
+.quote {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2.4vw, 1.375rem);
+  line-height: 1.35;
+  color: var(--lime);
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+.foot {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  padding-block: 0 calc(28px + env(safe-area-inset-bottom, 0px));
+}
+.foot .rule { border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 10px; }
+.foot .run {
+  margin: 0;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+.foot .legal { margin: 0; font-size: 0.75rem; line-height: 1.5; color: var(--mist); max-width: 62ch; }
+
+@media (min-width: 860px) {
+  .page { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; }
+  .inside { padding-top: 12px; }
+  h1 { font-size: clamp(2.6rem, 5vw, 3.5rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<main class="page">
+  <section class="cover">
+    <p class="byline">Ebook gratuito · <b>por Júlio Giani</b></p>
+    <h1>Você não é preguiçoso</h1>
+    <p class="lead">Entenda seu cérebro com TDAH e descubra como parar de depender apenas da força de vontade.</p>
+
+    <div class="get">
+      <a class="btn" id="baixar" href="voce-nao-e-preguicoso.pdf" download="Voce-Nao-E-Preguicoso-Julio-Giani.pdf">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2v11m0 0l-4.5-4.5M10 13l4.5-4.5M3 17.5h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg>
+        Baixar o ebook grátis
+      </a>
+      <p class="facts">PDF · 9 páginas · sem cadastro</p>
+
+      <details class="help" id="ajuda">
+        <summary>O download não começou?</summary>
+        <p>Dentro do Instagram o arquivo às vezes não baixa. Toque nos três pontinhos no canto de cima da tela, escolha <strong>Abrir no navegador</strong> e toque no botão de novo.</p>
+        <p>Ou <a href="voce-nao-e-preguicoso.pdf" id="abrir">abra o PDF direto nesta tela</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="inside" aria-labelledby="dentro">
+    <h2 id="dentro">O que você vai ler</h2>
+    <ol class="toc">
+      <li><span class="pg">p. 2</span><span class="ttl">Você quer fazer. Então por que não consegue?<span class="sub">O que as funções executivas têm a ver com travar na hora de começar.</span></span></li>
+      <li><span class="pg">p. 3</span><span class="ttl">Dopamina: por que tudo que é interessante parece mais fácil?<span class="sub">E como deixar o começo de uma tarefa mais acessível.</span></span></li>
+      <li><span class="pg">p. 4</span><span class="ttl">Sua cabeça não para?<span class="sub">Memória de trabalho e a sensação de sobrecarga.</span></span></li>
+      <li><span class="pg">p. 5</span><span class="ttl">Três estratégias para começar hoje<span class="sub">Atitudes simples para parar de depender só da memória.</span></span></li>
+    </ol>
+    <p class="quote">O problema nem sempre é não saber o que fazer. Às vezes, é conseguir transformar o que você sabe em algo que realmente faz.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="rule">
+    <p class="run">Você não é preguiçoso • AiBro</p>
+    <p class="legal">Este material tem finalidade educativa e não substitui avaliação, diagnóstico ou tratamento profissional. As experiências com TDAH variam entre pessoas.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ua = navigator.userAgent || "";
+  var noInstagram = /Instagram|FBAN|FBAV/i.test(ua);
+  var ajuda = document.getElementById("ajuda");
+
+  function registrar(evento, extra) {
+    try {
+      if (window.posthog && typeof window.posthog.capture === "function") {
+        var props = { pagina: "ebook_voce_nao_e_preguicoso", dentro_do_instagram: noInstagram };
+        for (var k in (extra || {})) props[k] = extra[k];
+        window.posthog.capture(evento, props);
+      }
+    } catch (e) {}
+  }
+
+  // Quem chega pelo navegador interno do Instagram já vê a ajuda aberta.
+  if (noInstagram) ajuda.open = true;
+
+  document.getElementById("baixar").addEventListener("click", function () {
+    registrar("ebook_download_click", { origem: "botao" });
+    ajuda.open = true;
+  });
+  document.getElementById("abrir").addEventListener("click", function () {
+    registrar("ebook_download_click", { origem: "link_abrir_pdf" });
+  });
+})();
+</script>
+</body>
+</html>
